@@ -2,10 +2,16 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+// should my type-sets be in an array? or leave as is?
 const ExercisesSchema = new Schema({
+  type: {
+    type: String,
+    required: "type of exercise is required"
+  },
+
   name: {
     type: String,
-    required: "workout name is Required"
+    required: "exercise name is Required"
   },
 
   duration: {
@@ -15,17 +21,14 @@ const ExercisesSchema = new Schema({
 
   weight: {
     type: Number,
-    required: "weight used is Required"
   },
 
   reps: {
     type: Number,
-    required: "number of reps is Required",
   },
 
   sets: {
     type: Number,
-    required: "number of sets is required",
   },
 
   userCreated: {

@@ -21,6 +21,10 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/custommethoddb", { useNewUrlParser: true });
 
 // Routes
+
+app.use(require("./routes/htmlRoutes"));
+
+// might moves this into its own route to reduce clutter
 app.post("/submit", ({body}, res) => {
   const user = new Workout(body);
   // call methods here methods will be to 
