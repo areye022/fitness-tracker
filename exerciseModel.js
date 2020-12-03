@@ -4,33 +4,34 @@ const Schema = mongoose.Schema;
 
 // should my type-sets be in an array? or leave as is?
 const ExercisesSchema = new Schema({
-  type: {
-    type: String,
-    required: "type of exercise is required"
-  },
+  Exercises: [{
+    type: {
+      type: String,
+      required: "type of exercise is required"
+    },
 
-  name: {
-    type: String,
-    required: "exercise name is Required"
-  },
+    name: {
+      type: String,
+      required: "exercise name is Required"
+    },
 
-  duration: {
-    type: Number,
-    required: "length of workout is required"
-  },
+    duration: {
+      type: Number,
+      required: "length of workout is required"
+    },
 
-  weight: {
-    type: Number,
-  },
+    weight: {
+      type: Number,
+    },
 
-  reps: {
-    type: Number,
-  },
+    reps: {
+      type: Number,
+    },
 
-  sets: {
-    type: Number,
-  },
-
+    sets: {
+      type: Number,
+    },
+}],
   userCreated: {
     type: Date,
     default: Date.now
