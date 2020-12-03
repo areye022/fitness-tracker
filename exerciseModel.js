@@ -2,9 +2,8 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-// should my type-sets be in an array? or leave as is?
 const ExercisesSchema = new Schema({
-  Exercises: [{
+  exercises: [{
     type: {
       type: String,
       required: "type of exercise is required"
@@ -32,13 +31,11 @@ const ExercisesSchema = new Schema({
       type: Number,
     },
 }],
-  userCreated: {
+  day: {
     type: Date,
     default: Date.now
   }
 });
-
-// methods
 
 // This creates our model from the above schema, using mongoose's model method
 const Exercises = mongoose.model("Exercises", ExercisesSchema);
