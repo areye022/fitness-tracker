@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
+const Exercises = require("./models/exerciseModel.js");
 const app = express();
 
 app.use(logger("dev"));
@@ -13,13 +14,18 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/custommethoddb", { useNewUrlParser: true });
-
 // Routes
 
 app.use(require("./routes/htmlRoutes"));
 app.use(require("./routes/apiRoutes.js"))
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workoutdb", 
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+});
 
 // Start the server
 app.listen(PORT, () => {
