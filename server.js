@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
-const Exercises = require("./models/exerciseModel.js");
 const app = express();
 
 app.use(logger("dev"));
