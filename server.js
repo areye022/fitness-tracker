@@ -20,6 +20,7 @@ app.use(require("./routes/apiRoutes.js"))
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workoutdb", 
 {
+  // necessary to fix all deprecation warnings!!
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
