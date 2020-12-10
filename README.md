@@ -1,7 +1,7 @@
 # Fitness Tracker
 
 ### Deployed Application 
-[FitnessTracker](###)
+[FitnessTracker](https://dry-sands-32009.herokuapp.com/)
 
 ![Screenshot of fitnesstracker](./assets/fitness1.JPG)
 ![Screenshot of fitnesstracker](./assets/fitness2.JPG)
