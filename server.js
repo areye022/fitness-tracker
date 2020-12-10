@@ -18,7 +18,7 @@ app.use(express.static("public"));
 app.use(require("./routes/htmlRoutes"));
 app.use(require("./routes/apiRoutes.js"))
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workoutdb", 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness-workout", 
 {
   // necessary to fix all deprecation warnings!!
   useNewUrlParser: true,
